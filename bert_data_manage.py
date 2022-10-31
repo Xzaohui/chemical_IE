@@ -8,8 +8,8 @@ import random
 lab={'M':0,'R':1,'P':2,'F':3,'ELE':4,'CA':5,'CO2':6,'RE':7,'BM':8,'BR':9,'BP':10,'BF':11,'O':12}
 # BIO_lab={'B-M':0,'I-M':1,'B-R':2,'I-R':3,'B-P':4,'I-P':5,'B-F':6,'I-F':7,'B-ELE':8,'I-ELE':9,'B-CA':10,'I-CA':11,'B-CO2':12,'I-CO2':13,'B-RE':14,'I-RE':15,'B-BM':16,'B-BR':18,'B-BP':20,'B-BF':22,'I-BM':17,'I-BR':19,'I-BP':21,'I-BF':23,'O':24,'S':25,'E':26}
 BIO_lab={'B-M':0,'I-M':1,'B-R':2,'I-R':3,'B-P':4,'I-P':5,'B-F':6,'I-F':7,'B-ELE':8,'I-ELE':9,'B-CA':10,'I-CA':11,'B-CO2':12,'I-CO2':13,'B-RE':14,'I-RE':15,'O':16,'S':17,'E':18}
-data_path='C:/Users/83912/Desktop/project/chemical_ner/data/'
-bert_path='C:/Users/83912/Desktop/project/chemical_ner/model/chemical-bert-uncased-negative'
+data_path='/home/chemical_IE/data/'
+bert_path='/home/chemical_IE/model/bert-base-uncased'
 tokenizer = BertTokenizerFast.from_pretrained(bert_path)
 
 # total_data_path=data_path+'5-our_last.jsonl'

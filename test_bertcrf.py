@@ -7,12 +7,12 @@ from transformers import BertTokenizer,BertTokenizerFast
 import bert_data_manage
 from torch.utils.data import Dataset, DataLoader
 
-bert_path='./model/chemical-bert-uncased-negative'
+bert_path='/home/chemical_IE/model/bert-base-uncased'
 tokenizer_word=BertTokenizer.from_pretrained(bert_path)
 tokenizer = BertTokenizerFast.from_pretrained(bert_path)
 model=model_bertcrf.model_bertcrf()
-model.load_state_dict(torch.load("./model/bertcrf_negative.pkl"))
 
+model.load_state_dict(torch.load("/home/chemical_IE/model/bertcrf_10-31,16_51_41.pkl"))
 model.to("cuda")
 model.eval()
 
@@ -39,7 +39,7 @@ def predict(data_input):
 
     pre_dataset=predict_dataset(total_data,total_mask,total_offset_mapping)
     pre_dataloader=DataLoader(pre_dataset,batch_size=1,shuffle=True ,num_workers = 0)
-    f= open('./res.txt','r+')
+    f= open('/home/chemical_IE/res.txt','r+')
     for i,(test_data,attention_mask,total_offset_mapping) in enumerate(pre_dataloader):
         _,path=model(test_data,attention_mask)
         j=1
