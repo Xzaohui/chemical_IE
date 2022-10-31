@@ -1,0 +1,5 @@
+import test_bertcrf
+
+if __name__=="__main__":
+    data_input="title:self-cleaning catalyst electrodes for stabilized co2 reduction to hydrocarbons ; abstract:a surface-restructuring strategy is presented that involves self-cleaning cu catalyst electrodes with unprecedented catalytic stability toward co2 reduction. under the working conditions, the pd atoms pre-deposited on cu surface induce continuous morphological and compositional restructuring of the cu surface, which constantly refreshes the catalyst surface and thus maintains the catalytic properties for co2 reduction to hydrocarbons. the pd-decorated cu electrode can catalyze co2 reduction with relatively stable selectivity and current density for up to 16h, which is one of the best catalytic durability performances among all cu electrocatalysts for effective co2 conversion to hydrocarbons. the generality of this approach of utilizing foreign metal atoms to induce surface restructuring toward stabilizing cu catalyst electrodes against deactivation by carbonaceous species accumulation in co2 reduction is further demonstrated by replacing pd with rh."
+    test_bertcrf.predict(data_input)
