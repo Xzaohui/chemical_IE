@@ -2,7 +2,6 @@ from transformers import BertForTokenClassification
 import torch
 import torch.nn as nn
 import bert_data_manage
-# bert_path='C:/Users/83912/Desktop/project/chemical_ner/model/chemical-bert-uncased-normal'
 
 def argmax(vec,axis):
     # return the argmax as a python int

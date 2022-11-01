@@ -6,8 +6,8 @@ import model_bertcrf
 import train_bertcrf
 import test_bertcrf
 import datetime
-data_path='C:/Users/83912/Desktop/project/chemical_ner/data/self_training.jsonl'
-bert_path='C:/Users/83912/Desktop/project/chemical_ner/model/chemical-bert-uncased'
+data_path='/home/chemical_IE/data/self_training.jsonl'
+bert_path='/home/chemical_IE/model/bert-base-uncased'
 tokenizer = BertTokenizerFast.from_pretrained(bert_path)
 
 
