@@ -1,15 +1,5 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
-"""
------------------------------
-# @FileName     :count_content.py
-# @Time         :2022/5/17 20:23
-# @Author       :Junbao
-# @Software     :PyCharm Community Edition
------------------------------
-Description :
-
-"""
 import json
 
 
