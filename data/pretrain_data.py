@@ -43,7 +43,7 @@ def pretrain_data_manage(data_path, save_path):
             break
 
 if __name__=="__main__":
+    for i in range(100):
+        pretrain_data_manage('./metadata/metadata_{}.jsonl'.format(str(i)),'./chemical_IE/data/pretrain_data.txt')
     # for i in range(1):
-    #     pretrain_data_manage('metadata_{}.jsonl'.format(str(i)),'pretrain_data.txt')
-    for i in range(1):
-        pretrain_data_manage('pdf_parses_{}.jsonl'.format(str(i)),'pretrain_data.txt')
+    #     pretrain_data_manage('./metadata/pdf_parses_{}.jsonl'.format(str(i)),'./chemical_IE/data/pretrain_data.txt')
