@@ -1,6 +1,5 @@
 # !/usr/bin/env python3
 from typing import List
-
 import torch
 import numpy as np
 from transformers import AutoModel, AutoTokenizer

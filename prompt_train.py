@@ -1,9 +1,6 @@
 # !/usr/bin/env python3
 """
-torch 版本 UIE fintuning 脚本。
-
-Author: pankeyu
-Date: 2022/09/06
+UIE fintuning 脚本
 """
 import os
 import time
