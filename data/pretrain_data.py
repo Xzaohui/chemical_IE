@@ -19,11 +19,11 @@ def pretrain_data_manage(data_path, save_path):
                 for section in tmp:
                     for sentence in section['text'].split('. '):
                         if sentence not in ['.','']:
-                            pre_train.write(sentence.replace('[','').replace(']','')+'.\n')
+                            pre_train.write(sentence.replace('[','').replace(']','').replace('.','')+'.\n')
             else:
                 for sentence in tmp.split('. '):
                     if sentence not in ['.','']:
-                        pre_train.write(sentence.replace('[','').replace(']','')+'.\n')
+                        pre_train.write(sentence.replace('[','').replace(']','').replace('.','')+'.\n')
         tmp=data.get('body_text','')
         if tmp:
             b=1
@@ -31,11 +31,11 @@ def pretrain_data_manage(data_path, save_path):
                 for section in tmp:
                     for sentence in section['text'].split('. '):
                         if sentence not in ['.','']:
-                            pre_train.write(sentence.replace('[','').replace(']','')+'.\n')
+                            pre_train.write(sentence.replace('[','').replace(']','').replace('.','')+'.\n')
             else:
                 for sentence in tmp.split('. '):
                     if sentence not in ['.','']:
-                        pre_train.write(sentence.replace('[','').replace(']','')+'.\n')
+                        pre_train.write(sentence.replace('[','').replace(']','').replace('.','')+'.\n')
         if b==1:
             pre_train.write('\n')
         i+=1
@@ -43,7 +43,9 @@ def pretrain_data_manage(data_path, save_path):
             break
 
 if __name__=="__main__":
+    # for i in range(100):
+    #     pretrain_data_manage('/mnt/nas-search-nlp/xzh/test/metadata/metadata_{}.jsonl'.format(str(i)),'pretrain_data.txt')
     for i in range(100):
-        pretrain_data_manage('./metadata/metadata_{}.jsonl'.format(str(i)),'./chemical_IE/data/pretrain_data.txt')
-    # for i in range(1):
-    #     pretrain_data_manage('./metadata/pdf_parses_{}.jsonl'.format(str(i)),'./chemical_IE/data/pretrain_data.txt')
+        pretrain_data_manage('/mnt/nas-search-nlp/xzh/test/pdf_parses/pdf_parses_{}.jsonl'.format(str(i)),'pretrain_data.txt')
+
+    pass
